@@ -1,0 +1,485 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Open sans", sans-serif;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.video-info .video-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.get-in-touch .get-in-touch-wrapper .inform .btn, .email .email-wrapper .input a, .info .info-wrapper .article a:hover, .info .info-wrapper .article a, .video-info .video-wrapper a:hover, .video-info .video-wrapper a {
+  border-radius: 6px;
+  text-decoration: none;
+  padding: 15px 70px;
+  font-size: small;
+  font-weight: 600;
+  border: 2px solid #ff2d2d;
+}
+
+.get-in-touch .get-in-touch-wrapper .text .line, .team .team-wrapper .line1, .feature .feature-wrapper .inform .line {
+  width: 130px;
+  background-color: red;
+  height: 2px;
+  margin-bottom: 100px;
+}
+
+header {
+  padding-top: 30px;
+  background-color: #f6f2f2;
+}
+header .header-wrapper {
+  background-color: #313030;
+}
+header .header-wrapper nav {
+  display: flex;
+  justify-content: center;
+}
+header .header-wrapper nav li {
+  list-style: none;
+  padding: 40px 20px 34px 20px;
+}
+header .header-wrapper nav li:hover {
+  background-color: #ff3f40;
+}
+header .header-wrapper nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: small;
+  font-weight: 600;
+}
+
+.video-info {
+  background-color: #f6f2f2;
+}
+.video-info .video-wrapper {
+  padding: 100px 0;
+}
+.video-info .video-wrapper .article {
+  width: 50%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-right: 100px;
+}
+.video-info .video-wrapper .article h1 {
+  font-weight: 800;
+  font-size: 40pt;
+  line-height: 60px;
+  letter-spacing: 5px;
+  padding-bottom: 30px;
+}
+.video-info .video-wrapper .article p {
+  line-height: 25px;
+  color: #585858;
+  padding-bottom: 50px;
+}
+.video-info .video-wrapper a {
+  background-color: #ff2d2d;
+  color: white;
+}
+.video-info .video-wrapper a:hover {
+  background-color: white;
+  color: #ff2d2d;
+}
+.video-info .video {
+  width: 50%;
+}
+
+.info {
+  padding: 100px 0;
+}
+.info .info-wrapper {
+  display: flex;
+  margin-bottom: 120px;
+}
+.info .info-wrapper .article {
+  width: 50%;
+  padding-right: 100px;
+}
+.info .info-wrapper .article h2 {
+  font-size: 30pt;
+  color: #585858;
+  margin-bottom: 50px;
+}
+.info .info-wrapper .article p {
+  margin-bottom: 50px;
+}
+.info .info-wrapper .article a {
+  background-color: white;
+  color: #ff2d2d;
+}
+.info .info-wrapper .article a:hover {
+  background-color: #ff2d2d;
+  color: white;
+}
+.info .info-wrapper .icons {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.info .info-wrapper .icons .item {
+  width: 50%;
+  padding: 0 20px 35px 0;
+}
+.info .info-wrapper .icons .item img {
+  width: 30px;
+  margin-bottom: 15px;
+}
+.info .info-wrapper .icons .item h3 {
+  color: #585858;
+  margin-bottom: 10px;
+  color: #585858;
+}
+.info .info-wrapper .icons .item p {
+  color: #585858;
+  line-height: 30px;
+  color: #585858;
+}
+
+hr {
+  background-color: #ececec;
+  height: 3px;
+  border: none;
+}
+
+.feature {
+  margin-bottom: 150px;
+}
+.feature .feature-wrapper .inform {
+  margin-bottom: 100px;
+}
+.feature .feature-wrapper .inform h2 {
+  color: #585858;
+  text-align: center;
+  font-size: 30pt;
+  margin-bottom: 30px;
+}
+.feature .feature-wrapper .inform p {
+  color: #585858;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.feature .feature-wrapper .inform .line {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+.feature .feature-wrapper .link-img nav ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.feature .feature-wrapper .link-img nav ul li {
+  list-style: none;
+  padding: 0 40px;
+}
+.feature .feature-wrapper .link-img nav ul li:last-child {
+  padding-right: 0;
+}
+.feature .feature-wrapper .link-img nav ul li a {
+  text-decoration: none;
+  color: #585858;
+  font-weight: 600;
+}
+.feature .feature-wrapper .link-img nav ul li a:hover {
+  color: #ff3f40;
+}
+.feature .feature-wrapper .link-img .pictures {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature .feature-wrapper .link-img .pictures p {
+  width: 25%;
+  padding: 0 20px 20px 0;
+}
+.feature .feature-wrapper .link-img .pictures img {
+  width: 300px;
+  height: 300px;
+}
+
+.team {
+  margin-bottom: 110px;
+}
+.team .team-wrapper h2 {
+  color: #585858;
+  font-size: 30pt;
+  margin-bottom: 30px;
+}
+.team .team-wrapper p {
+  color: #585858;
+  line-height: 25px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+.team .team-wrapper .wrapper {
+  display: flex;
+}
+.team .team-wrapper .wrapper .left-wrapper {
+  width: 25%;
+}
+.team .team-wrapper .wrapper .left-wrapper img {
+  width: 320px;
+  height: 482px;
+}
+.team .team-wrapper .wrapper .right-wrapper {
+  width: 75%;
+  padding-left: 70px;
+}
+.team .team-wrapper .wrapper .right-wrapper h3 {
+  color: #585858;
+  font-size: 20pt;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.team .team-wrapper .wrapper .right-wrapper p {
+  color: #585858;
+  line-height: 30px;
+}
+.team .team-wrapper .wrapper .right-wrapper nav {
+  margin-bottom: 50px;
+}
+.team .team-wrapper .wrapper .right-wrapper nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+.team .team-wrapper .wrapper .right-wrapper nav ul li a {
+  text-decoration: none;
+  color: #585858;
+  font-style: italic;
+}
+.team .team-wrapper .wrapper .right-wrapper nav ul li:not(:last-child) {
+  padding-right: 30px;
+}
+.team .team-wrapper .wrapper .right-wrapper .images {
+  display: flex;
+  justify-content: space-between;
+}
+.team .team-wrapper .wrapper .right-wrapper .images img {
+  width: 200px;
+  height: 220px;
+}
+
+.email {
+  margin-bottom: 100px;
+  background-color: #f5f0dd;
+  padding: 100px 0 120px 0;
+}
+.email .email-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.email .email-wrapper h3 {
+  color: white;
+  font-size: 35pt;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.email .email-wrapper p {
+  color: white;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.email .email-wrapper .input {
+  display: flex;
+  justify-content: center;
+}
+.email .email-wrapper .input input[type=email] {
+  width: 450px;
+  border: white;
+  border-radius: 6px;
+  padding-left: 30px;
+}
+.email .email-wrapper .input a {
+  background-color: #ff2d2d;
+  color: white;
+  padding: 21px 50px;
+  font-size: 13pt;
+  margin-left: 20px;
+}
+
+.get-in-touch {
+  margin-bottom: 110px;
+}
+.get-in-touch .get-in-touch-wrapper .text {
+  margin-bottom: 100px;
+}
+.get-in-touch .get-in-touch-wrapper .text h3 {
+  color: #585858;
+  font-size: 30pt;
+  margin-bottom: 30px;
+}
+.get-in-touch .get-in-touch-wrapper .text p {
+  max-width: 725px;
+  color: #585858;
+  line-height: 25px;
+  margin-bottom: 50px;
+}
+.get-in-touch .get-in-touch-wrapper .text .line {
+  margin: 0;
+}
+.get-in-touch .get-in-touch-wrapper .inform {
+  display: flex;
+}
+.get-in-touch .get-in-touch-wrapper .inform .left-wrapper {
+  width: 70%;
+  padding-right: 125px;
+}
+.get-in-touch .get-in-touch-wrapper .inform .left-wrapper .input {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.get-in-touch .get-in-touch-wrapper .inform .left-wrapper .input input[type=text] {
+  border: white;
+  background-color: #e5e5e5;
+  border-radius: 6px;
+  padding: 15px 140px 15px 30px;
+  margin-right: 50px;
+}
+.get-in-touch .get-in-touch-wrapper .inform .left-wrapper .input input[type=email] {
+  border: white;
+  background-color: #e5e5e5;
+  border-radius: 6px;
+  padding: 15px 140px 15px 30px;
+}
+.get-in-touch .get-in-touch-wrapper .inform input[name=message] {
+  width: 100%;
+  border: white;
+  background-color: #e5e5e5;
+  border-radius: 6px;
+  padding: 20px 150px 250px 30px;
+  margin-bottom: 50px;
+}
+.get-in-touch .get-in-touch-wrapper .inform .btn {
+  background-color: #ff2d2d;
+  color: white;
+  padding: 15px 324px;
+  margin-top: 80px;
+}
+.get-in-touch .get-in-touch-wrapper .right-wrapper {
+  width: 30%;
+  background-color: #2d2d2d;
+  padding: 70px;
+}
+.get-in-touch .get-in-touch-wrapper .right-wrapper h3 {
+  color: white;
+  font-size: large;
+}
+.get-in-touch .get-in-touch-wrapper .right-wrapper p {
+  color: white;
+  font-size: small;
+}
+
+footer {
+  padding: 30px 0 15px 0;
+  background-color: #313030;
+}
+footer .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-wrapper p {
+  color: #b8b8b8;
+}
+footer .footer-wrapper nav ul {
+  display: flex;
+}
+footer .footer-wrapper nav ul li {
+  list-style: none;
+}
+footer .footer-wrapper nav ul li:not(:last-child) {
+  padding-right: 5px;
+}
+footer .footer-wrapper nav ul li a img {
+  width: 35px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

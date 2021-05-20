@@ -1,0 +1,35 @@
+header{
+  padding-top: 30px;
+
+  background-color: $bg-color1;
+  .header-wrapper{
+    background-color: $header-color;
+
+    nav{
+      display: flex;
+      justify-content: center;
+
+
+
+      li{
+        list-style: none;
+        padding: 40px 20px 34px 20px ;
+        &:hover{
+          background-color: $hover-color;
+
+        }
+
+        a{
+          color: white;
+          text-decoration: none;
+          font-size: small;
+          font-weight: 600;
+
+
+
+        }
+      }
+    }
+  }
+
+}
